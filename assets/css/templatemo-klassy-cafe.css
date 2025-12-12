@@ -34,10 +34,7 @@ font & reset css
 reset
 --------------------------------------------- 
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
-s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-figure, header, nav, section, article, aside, footer, figcaption {
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -120,12 +117,12 @@ body {
 }
 
 ::selection {
-  background: #fb5849;
+  background: #3c2a08;  /*PARA SELECCIONAR EL TEXTO DENTRO DE LA PAG*/
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #fb5849;
+  background: #3c2a08 ;
   color: #fff;
 }
 
@@ -147,7 +144,7 @@ body {
 
 .main-white-button a {
   font-size: 13px;
-  color: #fb5849;
+  color: #3c2a08; /*LETRAS BOTON RSERVAS*/
   background-color: #fff;
   padding: 12px 25px;
   display: inline-block;
@@ -174,7 +171,7 @@ body {
 .section-heading h6 {
   position: relative;
   font-size: 15px;
-  color: #fb5849;
+  color: #bc9f7f;    /* TITULOS*/
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -185,10 +182,10 @@ body {
   width: 30px;
   height: 1px;
   content: '';
-  position: absolute;
+  position: absolute;           /* RAYAS HORIZONTALES DE LOS TITULOS*/
   left: 0;
   top: 8px;
-  background-color: #fb5849;
+  background-color: #bc9f7f;
 }
 
 .section-heading h2 {
@@ -223,11 +220,11 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #fb5849!important;
+  color: #bc9f7f !important;
 }
 
 .background-header .nav li a.active {
-  color: #fb5849!important;
+  color: #bc9f7f !important;
 }
 
 .header-area {
@@ -249,6 +246,7 @@ header
   background: transparent;
 }
 
+
 .header-area .main-nav .logo {
   line-height: 100px;
   color: #fff;
@@ -263,6 +261,10 @@ header
   transition: all 0.3s ease 0s;
 }
 
+.header-area .main-nav .logo img {
+  height: 100%;
+  width: 80px;
+}
 .background-header .main-nav .logo {
   line-height: 75px;
 }
@@ -297,7 +299,7 @@ header
   display: block;
   font-weight: 600;
   font-size: 15px;
-  color: #2a2a2a;
+  color: #bc9f7f ;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -309,18 +311,18 @@ header
   letter-spacing: 1px;
 }
 
-.header-area .main-nav .nav li a {
-  color: #2a2a2a;
+.header-area .main-nav .nav li a { /*COLOR PPAL DEL ENCABEZADO, INICIO,MENU...*/
+  color: #3c2a08;
 }
 
-.header-area .main-nav .nav li:hover a,
+.header-area .main-nav .nav li:hover a,  /*COLOR DEL ENCABEZADO, INICIO,MENU...*/
 .header-area .main-nav .nav li a.active {
-  color: #fb5849!important;
+  color: #bc9f7f!important;
 }
 
 .background-header .main-nav .nav li:hover a,
-.background-header .main-nav .nav li a.active {
-  color: #fb5849!important;
+.background-header .main-nav .nav li a.active { /*COLOR DEL ENCABEZADO, INICIO,MENU...*/
+  color: #bc9f7f!important;
   opacity: 1;
 }
 
@@ -382,7 +384,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #fb5849!important;
+  color: #bc9f7f !important;
   padding-left: 25px;
 }
 
@@ -522,7 +524,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #fb5849;
+  color: #bc9f7f ;
 }
 
 @media (max-width: 1200px) {
@@ -541,7 +543,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #fb5849!important;
+    color: #bc9f7f !important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -599,7 +601,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #fb5849!important;
+    color: #bc9f7f !important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -624,7 +626,7 @@ header
     height: auto !important;
   }
   .header-area .main-nav .nav li.submenu:after {
-    color: #3B566E;
+    color: #bc9f7f ;
     right: 25px;
     font-size: 14px;
     top: 15px;
@@ -657,7 +659,7 @@ banner
 }
 
 #top .left-content {
-  background-image: url(../images/top-left-bg.jpg);
+  background-image: url(../images/enfoque--de-un-grano-cafe.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -743,10 +745,20 @@ banner
 
 /* ==== Slider Style === */
 .Modern-Slider .item .img-fill{
-  height:100%;
-  max-height: 700px;
+  width:100%;
+  height:400px;
+  overflow: hidden;
+  /* max-height: 700px; */
   background:#000;
 }
+
+.Modern-Slider .item .img-fill img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 
 .Modern-Slider .item .info > div{
   display:inline-block!important;
@@ -760,7 +772,7 @@ banner
   right:30px;
   width: 50px;
   height: 50px;
-  background-color: #fb5849;
+  background-color: #bc9f7f ;
   border:0 none;
   line-height: 44px;
   border-radius: 50%;
@@ -789,7 +801,7 @@ banner
   left:30px;
   width: 50px;
   height: 50px;
-  background-color: #fb5849;
+  background-color: #bc9f7f ;
   border:0 none;
   line-height: 44px;
   border-radius: 50%;
@@ -875,23 +887,23 @@ about
   position: relative;
 }
 
-#about .right-content .thumb a {
+#about .right-content .thumb video {
   position: absolute;
-  left: 50%;
+  left: 30%;
   top: 50%;
-  width: 70px;
-  height: 70px;
+  width: 300px;
+  height: auto;
   display: inline-block;
   line-height: 70px;
   text-align: center;
-  background-color: #fb5849;
+  background-color: #bc9f7f;
   color: #fff;
-  border-radius: 50%;
+  border-radius: 2%;
   transform: translate(-35px, -35px);
   transition: all .3s;
 }
 
-#about .right-content .thumb a:hover {
+#about .right-content .thumb video:hover {
   opacity: .9;
 }
 
@@ -941,8 +953,8 @@ menu
 .info {
   position: relative;
   width: 100%;
-  background-color: #fb5849;
-  border: 1px solid #fb5849;
+  background-color: #bc9f7f ;
+  border: 1px solid #bc9f7f ;
   transform: translateY(100%)
   translateY(120px)
   translateZ(0);
@@ -971,7 +983,7 @@ menu
   position: absolute;
   width: 70px;
   height: 70px;
-  background-color: #fb5849;
+  background-color: #bc9f7f;  /*COLOR DE LOS PRECIOS*/
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -1015,7 +1027,7 @@ menu
 #menu .owl-nav .owl-prev:before {
   display: inline-block;
   font-family: 'FontAwesome';
-  color: #fb5849;
+  color: #3c2a08; /*FLECHA IZQUIERDA PLATOS*/;
   font-size: 25px;
   font-weight: 700;
   content: '\f104';
@@ -1047,12 +1059,11 @@ menu
 #menu .owl-nav .owl-next:before {
   display: inline-block;
   font-family: 'FontAwesome';
-  color: #fb5849;
+  color: #3c2a08; /*FLECHA DERECHA PLATOS*/
   font-size: 25px;
   font-weight: 700;
   content: '\f105';
 }
-
 
 
 /* 
@@ -1094,13 +1105,13 @@ reservation
 
 #reservation .phone,
 #reservation .message {
-  background-color: #fff;
+  background-color: #fff;  /*CAJIITA DONDE ESTA MENSAJE Y TELEFONO*/
   border-radius: 5px;
   text-align: center;
   padding: 0px 0px 20px 0px;
 }
 
-#reservation .phone i,
+#reservation .phone i,  /*ICONOS TELEFONO Y MENSAJES*/
 #reservation .message i {
   width: 70px;
   height: 70px;
@@ -1108,7 +1119,7 @@ reservation
   text-align: center;
   line-height: 70px;
   color: #fff;
-  background-color: #fb5849;
+  background-color: #bc9f7f;
   border-radius: 50%;
   font-size: 24px;
   margin-top: -35px;
@@ -1134,7 +1145,7 @@ reservation
 
 #reservation .phone span a:hover,
 #reservation .message span a:hover {
-  color: #fb5849;
+  color: #3c2a08 ;
 }
 
 #contact {
@@ -1147,8 +1158,8 @@ reservation
 #contact h4 {
   text-align: center;
   font-weight: 700;
-  font-size: 30px;
-  color: #2a2a2a;
+  font-size: 30px;    /*TABLE RESERVATION*/
+  color: #bc9f7f ;
   margin-bottom: 30px;
 }
 
@@ -1180,14 +1191,14 @@ reservation
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
-  border-color: #fb5849;
+  border-color: #3c2a08;
 }
 
 .contact-form button {
   margin-top: -10px;
   font-size: 13px;
   color: #fff;
-  background-color: #fb5849;
+  background-color: #3c2a08; /*BOTON PARA HACER RESERVAS*/
   padding: 12px 25px;
   width: 100%;
   box-shadow: none;
@@ -1279,7 +1290,7 @@ offers
   margin: 0 auto 15px auto;
 }
 #offers #tabs ul .ui-tabs-active a {
-  color: #fb5849;
+  color: #bc9f7f;
   position: relative;
 }
 #offers #tabs ul .ui-tabs-active span {
@@ -1329,7 +1340,7 @@ offers
   right: 0;
   width: 70px;
   height: 70px;
-  background-color: #fb5849;
+  background-color: #bc9f7f;
   display: inline-block;
   text-align: center;
   line-height: 70px;
@@ -1349,7 +1360,7 @@ footer
 footer {
   margin-top: 60px;
   padding: 50px 0px;
-  background-color: #fb5849;
+  background-color: #3c2a08;
 }
 
 footer .left-text-content p {
@@ -1373,7 +1384,15 @@ footer .right-text-content {
 }
 
 footer .logo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+}
+
+footer .logo img {
   text-align: center;
+  width: 90px;
+  height: auto;
 }
 
 footer .right-text-content ul li {
@@ -1394,7 +1413,7 @@ footer .right-text-content ul li a {
   font-size: 20px;
   background-color: #fff;
   border-radius: 50%;
-  color: #fb5849;
+  color: #bc9f7f;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
@@ -1471,7 +1490,7 @@ responsive
 
 #preloader {
   overflow: hidden;
-  background-color: #fb5849;
+  background-color: #bc9f7f;   /*PRECARGADO INICIANDO*/
   left: 0;
   right: 0;
   top: 0;
@@ -1494,7 +1513,7 @@ responsive
 }
 
 #preloader .jumper > div {
-  background-color: #fff;
+  background-color: #3c2a08;  /*COLOR DE LAS BOLITAS DEL PRECARGADOR*/
   width: 10px;
   height: 10px;
   border-radius: 100%;
